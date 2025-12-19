@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conserto Cell Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #1c1c1c;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #2c5364;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #203a43;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .cta {
+            background-color: #2c5364;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .cta h2 {
+            margin-bottom: 15px;
+        }
+
+        .cta button {
+            background-color: #00d4ff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta button:hover {
+            background-color: #00aacc;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Conserto Cell Delivery</h1>
+        <p>Consertamos seu celular com rapidez, segurança e entrega na sua casa</p>
+    </header>
+
+    <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main class="container">
+
+        <section id="servicos">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+            </div>
+
+            <div class="services">
+                <div class="service-card">
+                    <h3>Troca de Tela</h3>
+                    <p>Substituição de telas quebradas com peças de alta qualidade.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Troca de Bateria</h3>
+                    <p>Baterias novas para aumentar a vida útil do seu celular.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Conector de Carga</h3>
+                    <p>Reparo rápido para problemas de carregamento.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Atualização de Software</h3>
+                    <p>Correção de erros, travamentos e lentidão do sistema.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="cta" id="contato">
+        <h2>Precisa de conserto agora?</h2>
+        <p>Atendemos via delivery. Fale conosco pelo WhatsApp!</p>
+        <br>
+        <button onclick="abrirWhatsApp()">Entrar em Contato</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Conserto Cell Delivery - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function abrirWhatsApp() {
+            const telefone = "5522991050728"
+            const mensagem = encodeURIComponent("Olá! Gostaria de um orçamento para conserto de celular.");
+            const url = `https://wa.me/${telefone}?text=${mensagem}`;
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
