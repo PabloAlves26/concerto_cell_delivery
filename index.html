@@ -138,16 +138,13 @@
         }
     </style>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5MNGKGS6J">
-</script>
+    <!-- Google tag (gtag.js) event -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J5MNGKGS6J');
+  gtag('event', 'ads_conversion_Solicitar_cota_o_1', {
+    // <event_parameters>
+  });
 </script>
+
 </head>
 <body>
 
@@ -211,7 +208,7 @@
             const url = `https://wa.me/${telefone}?text=${mensagem}`;
             window.open(url, "_blank");
         }
-    </script>
+    </>
 
 </body>
 </html>
